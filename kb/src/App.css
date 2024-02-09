@@ -1,0 +1,338 @@
+body{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+#searchInput{
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+}
+#main{
+width: 100vw;
+}
+
+.Logo {
+  font-size: 36px;
+  letter-spacing: -1.1px;
+  font-weight: 800;
+  color: white;
+  align-content: flex-start;
+}
+
+.searchbar{
+  position: fixed;
+  left: 35vw;
+  top: -0.5vw;
+  height: 3vw;
+  width: 90vw;
+  max-width: 500px;
+  font-size: large;
+  border-radius: 40px;
+  border: none;
+  padding-left: 20px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; 
+  padding: 2px 23px 0px 34px;
+  z-index: 3;
+}
+
+.searchbar:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 10px rgba(75, 181, 67, 0.7); 
+}
+
+.lcont{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.navBar-Cont{
+  background-image: url(/src/assets/bg.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0 0 12px 0;
+  align-items: center;
+  height: 90px;
+  width: 100vw;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+
+.BookCard{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 85px;
+  padding: 46px;
+  background-color: white;
+  margin-bottom: 20vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: white;
+  padding: 20px 15px 12px 15px;
+  border-radius: 10px;
+  width: 240px;
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+
+.klogo{
+  height: 50px;
+  margin-left: 20px;
+}
+.card:hover{
+  transform: scale(1.03); 
+  cursor: pointer;
+}
+
+.card-p{
+  margin-top: 0;
+  margin-bottom: 0  ;
+}
+
+.RegisBtn{
+  padding: 15px 25px 15px 25px;
+  border-radius: 30px;
+  font-size: 15px;
+  border: none;
+  margin-right: 20px;
+  margin-top: 11px;
+  background-color: white;
+  transition: box-shadow 0.2s, transform 0.8s;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;  
+}
+
+.RegisBtn:hover{
+  box-shadow: 0 5px 15px #afe0f5;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.RegisBtn:active {
+  box-shadow: #e0e2f4 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.cardimg{
+  height: 14.5vw;
+  width: 12vw;
+  border-radius: 10px;
+}
+
+h1{
+  font-size: 44px;
+  color:#727070
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 10vh;
+  width: 100%;
+  background-color: #caf3e2;
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: -1;
+  align-items: center;
+  padding: 0 20px 0 20px;
+}
+
+
+
+/* Adding Media Queries */
+
+@media (max-width:1024px){
+  .Logo {
+    font-size: 27px;
+  }
+  .klogo{
+    height: 36px;
+  }
+}
+
+@media (max-width:950px){
+  .searchbar {
+    left: 33vw;
+    top: -0.5vw;
+    height: 4.5vw;
+    width: 43vw;
+    max-width: 500px;
+  }
+  .BackBtn{
+    width: 16vw;
+  }
+}
+
+@media (max-width:768px){
+  .searchbar {
+    left: 36vw;
+    height: 5vw;
+    width: 40vw;
+  }
+
+  .card {
+    width: 263px;
+    height: 44vw;
+  }
+  
+  .cardimg{
+      height: 24.5vw;
+      width: 24vw;
+      border-radius: 10px;
+  }
+}
+
+@media (max-width:699px){
+  .Logo {
+    font-size: 20px;
+  }
+  .klogo{
+    height: 28px;
+  }
+  .searchbar {
+    left: 33vw;
+    height: 6vw;
+    width: 40vw;
+  }
+
+  .card {
+    width: 263px;
+    height: 60vw;
+    padding-top: px;
+  }
+  
+  .cardimg{
+      height: 32vw;
+      width: 28vw;
+      border-radius: 10px;
+  }
+}
+
+@media (max-width:599px){
+  .Logo {
+    font-size: 17px;
+  }
+  .klogo{
+    height: 25px;
+  }
+  .searchbar {
+    left: 33vw;
+    height: 7vw;
+    width: 37vw;
+  }
+  .RegisBtn {
+    padding: 9px 22px 9px 22px;
+    border-radius: 30px;
+    font-size: 15px;
+    border: none;
+    margin-right: 20px;
+    margin-top: 6px;
+  } 
+
+  .card {
+    width: 263px;
+    height: 60vw;
+    padding-top: px;
+  }
+  
+  .cardimg{
+      height: 32vw;
+      width: 28vw;
+      border-radius: 10px;
+  }
+}
+
+@media (max-width:530px){
+  .searchbar {
+    left: 34vw;
+    height: 6vw;
+    width: 37vw;
+    top: 0vw;
+  }
+
+}
+
+@media (max-width: 500px){
+  .Logo{
+    display: none;
+  }
+  .klogo{
+    height: 30px;
+  }
+  .searchbar {
+    left: 24vw;
+    height: 8vw;
+    font-size:12px;
+    width: 37vw;
+    top: -1vw;
+  }
+
+  .card {
+    width: 263px;
+    height: 80vw;
+    padding-top: px;
+  }
+  
+  .cardimg{
+    height: 37vw;
+    width: 32vw;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 410px){
+  .Logo{
+    display: none;
+  }
+  .klogo{
+    height: 30px;
+  }
+  .searchbar {
+    left: 24vw;
+    height: 10vw;
+    font-size:12px;
+    width: 39vw;
+    top: 0vw;
+  }
+
+  .card {
+    width: 263px;
+    height: 90vw;
+  }
+  
+  .cardimg{
+    height: 40vw;
+    width: 37vw;
+    border-radius: 10px;
+  }
+
+  .RegisBtn {
+    padding: 8px 13px 8px 13px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+}
+
