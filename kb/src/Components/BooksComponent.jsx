@@ -38,8 +38,10 @@ function BooksComponent() {
   }
 
   return (
+    // Main div
     <div id="main">
       
+      {/*  NavBar */}
       <div className='navBar-Cont'>
           <div className='lcont'>
             <img src={logo} className='klogo'/>
@@ -47,8 +49,9 @@ function BooksComponent() {
           </div>
           <Link to="/form"><button className='RegisBtn'>Register</button></Link>
       </div>
-
+      {/* Search bar */}
       <input type="search" id='searchInput' onChange={(e) => handleSearch(e)} className= "searchbar" placeholder='Search Books'/>
+      {/* mapping the data for each element from the API */}
       <div className="BookCard">{filteringBooksData.map((book)=>{
         return(
           <div key={book.id} className="card">
@@ -56,7 +59,7 @@ function BooksComponent() {
             <div>
               <img src={book.imageLinks.smallThumbnail} className='cardimg'/>
             </div>
-
+      
             <div style={{display:"flex", flexDirection:"column", width:"200px" }}>
               <h3 style={{textAlign:"center", paddingLeft:"1px", paddingRight:"1px" ,paddingBottom:"1px", height:"70px"}}>{book.title}</h3  >
                 <div style={{display:"flex", justifyContent:"space-between"}}>
@@ -69,6 +72,7 @@ function BooksComponent() {
         )
       })}
       </div>
+      {/* Footer Section */}
       <footer>
         <div>Made by Abhinandan Gupta</div>
         <div>Reactnd Books API</div>
