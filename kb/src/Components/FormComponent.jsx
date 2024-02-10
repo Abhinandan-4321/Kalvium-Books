@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import logo from '/src/assets/Logo.png'
@@ -11,13 +11,21 @@ function FormComponent() {
   // Setting states
   const {register, handleSubmit, formState: { errors }, getValues } = useForm()
   const [Submit, setSubmit] = useState(false)
+  const [save, setSave] = useState([])
 
   // using useNavigate Hook
   const navigate = useNavigate()
+
   const onSubmit= (data) => {
+    setSave(data)
     setSubmit(true)
-    navigate('/success')
   } 
+  useEffect(()=>{
+    console.log(save)
+    if(Submit){
+      navigate('/success')
+    }
+  },[save,navigate])
 
   return (<>
   {/* NavBar section */}
@@ -62,7 +70,7 @@ function FormComponent() {
         <span className='span'>{errors.passwordConfirmation?.message}</span><br/>  
 
         {/* Submit Button */}
-        <button className='sbtn'>Sign Up</button>
+        <button className='sbtn' type='submit'>Sign Up</button>
 
       </form>
     </div>
