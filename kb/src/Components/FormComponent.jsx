@@ -59,7 +59,7 @@ function FormComponent() {
 
         {/* Password */}
         <input type="password" placeholder='Enter Your Password' {...register("password", {required:"Password is required",
-        minLength:{value:4, message:"Password must be more than 8 characters"},
+        minLength:{value:10, message:"Password must be more than 10 characters"},
         maxLength:{value:20, message:"Password cannot be more than 20 characters"},
         pattern: { value:/^(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\-])[\w!@#$%^&*()_+{}\[\]:;<>,.?~\\-]{8,}$/, message: 'Password must contain at least one special character',}})}/><br/>
         <span className='span'>{errors.password?.message}</span><br/>
